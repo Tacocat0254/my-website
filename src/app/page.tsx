@@ -144,10 +144,10 @@ export default function Home() {
           <div className="glass-card rounded-2xl p-8 hover-lift">
             <div className="prose prose-lg text-gray-600">
               <p>
-                As a Turing Scholar at UT Austin, I'm passionate about bridging the gap between theoretical computer science and practical applications. My journey in technology began with a curiosity about how computers work 
+                As a Turing Scholar at UT Austin, I am passionate about bridging the gap between theoretical computer science and practical applications. My journey in technology began with a curiosity about how computers work 
                 at their core. My interests span from low-level systems programming to AI/ML. </p>
               <p className="mt-4">
-                Beyond coding, I'm an avid rock climber and hiker, finding that the problem-solving skills I develop on the wall often translate to my technical work. I believe in creating technology that's not just innovative, but also accessible and impactful.
+                Beyond coding, I am an avid rock climber and hiker, finding that the problem-solving skills I develop on the wall often translate to my technical work. I believe in creating technology that is not just innovative, but also accessible and impactful.
               </p>
             </div>
           </div>
@@ -405,7 +405,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900">First-Year Trading and Technology Program (FTTP)</h3>
               <p className="text-gray-600">Jane Street • March 2025</p>
               <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Jane Street's First Year Trading and Technology 3-day program in NYC.</li>
+                <li>Jane Street&apos;s First Year Trading and Technology 3-day program in NYC.</li>
                 <li>Chosen as one of 100 students accross the US and Canada to attend.</li>
                 <li> Used a game theoretic and mathematical approach while competing in an Estimathon to determine an appropriate range of values for trivia questions.</li>
               </ul>
@@ -438,7 +438,7 @@ export default function Home() {
               <p className="text-gray-600">Lakeside Aquatics Club • May 2023 – September 2024</p>
               <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
                 <li>Demonstrated expertise in various swim strokes, techniques, and water safety protocols.</li>
-                <li>Conducted assessments to evaluate participants' swimming abilities and designed customized lesson plans to meet their specific needs and goals.</li>
+                <li>Conducted assessments to evaluate participants&apos; swimming abilities and designed customized lesson plans to meet their specific needs and goals.</li>
                 <li>Created a safe and supportive learning environment, ensuring the well-being and comfort of participants, ages 3-15  at all times.</li>
               </ul>
             </div>
@@ -459,7 +459,7 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">JPEB: 16-bit Computer</h3>
                 <p className="mt-2 text-gray-600">Custom 16-bit computer from scratch, including a custom ISA
-                inspired by Dr. Bruce Jacob's RiSC-16, compiler, assembler, prcessor, and emmulator.</p>
+                inspired by Dr. Bruce Jacob&apos;s RiSC-16, compiler, assembler, prcessor, and emmulator.</p>
                 <div className="mt-4">
                   <a 
                     href="https://github.com/PaulBailey-1/JPEB" 
