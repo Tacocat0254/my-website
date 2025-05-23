@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with Next.js and Tailwind CSS.
 
-## 🚀 Features
+## Features
 
 - **Tech Stack**
   - Next.js 14 (React Framework)
@@ -25,7 +25,7 @@ A modern, responsive personal portfolio website built with Next.js and Tailwind 
   - Resume download
   - Social media links (LinkedIn, GitHub, Discord)
 
-## 🛠️ Website
+## Website
 
 The website is live at https://tacocat0254.github.io/my-website/
 
