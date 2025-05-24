@@ -29,23 +29,23 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8 gradient-text leading-[1.2] lavigne-text">
               Emily Liang
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-8 font-medium leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-white mb-8 font-medium leading-relaxed">
             Computer Science, Mathematics, and Business <br />
             Student at UT Austin
             </p>
             <div className="space-y-4 text-lg sm:text-xl">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-white">
                 <a href="mailto:emilyliangyr@gmail.com" 
-                   className="hover:text-pink-600 transition-colors inline-flex items-center hover-lift group">
+                   className="hover:text-pink-600 dark:hover:text-purple-400 transition-colors inline-flex items-center hover-lift group">
                   <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   emilyliangyr@gmail.com
                 </a>
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-white">
                 <a href="tel:+6822054481" 
-                   className="hover:text-pink-600 transition-colors inline-flex items-center hover-lift group">
+                   className="hover:text-pink-600 dark:hover:text-purple-400 transition-colors inline-flex items-center hover-lift group">
                   <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -65,7 +65,7 @@ export default function Home() {
               </a>
               <a 
                 href="#projects" 
-                className="glass-card inline-flex items-center px-8 py-4 border border-pink-200 text-base font-medium rounded-full text-gray-700 hover:bg-pink-50 transition-all hover-lift group"
+                className="glass-card inline-flex items-center px-8 py-4 border border-pink-200 text-base font-medium rounded-full text-gray-700 dark:text-white hover:bg-pink-50 transition-all hover-lift group"
               >
                 View My Projects
                 <svg className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,25 +78,24 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm relative">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="cat-paw animate-paw" style={{ top: '10%', right: '10%' }}></div>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 gradient-text text-center lavigne-text">About Me</h2>
-          
+        <h2 className="text-4xl font-bold mb-8 gradient-text text-center lavigne-text">About Me</h2>
           {/* Profile Section */}
           <div className="glass-card rounded-2xl p-8 mb-12 hover-lift">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Profile Image Container */}
               <div className="relative">
                 <div className="aspect-square relative rounded-2xl overflow-hidden">
-                <Image
+        <Image
                     src={`${process.env.NODE_ENV === 'production' ? '/my-website' : ''}/profile.jpg`}
                     alt="Profile picture"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
+          priority
+        />
                   {/* Decorative paw prints */}
                   <div className="absolute -top-4 -right-4 w-12 h-12 cat-paw animate-paw opacity-70"></div>
                   <div className="absolute -bottom-4 -left-4 w-12 h-12 cat-paw animate-paw opacity-70" style={{ animationDelay: '1s' }}></div>
@@ -110,7 +109,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2 text-gray-900 lavigne-text">Emily Liang</h3>
-                  <p className="text-pink-600 font-medium">Turing Scholar (Computer Science Honors)</p>
+                  <p className="text-pink-600 dark:text-purple-500 font-medium">Turing Scholar (Computer Science Honors)</p>
                 </div>
                 <div className="prose prose-lg text-gray-600">
                   <p>
@@ -158,7 +157,7 @@ export default function Home() {
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="cat-paw animate-paw" style={{ bottom: '10%', left: '10%' }}></div>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 gradient-text text-center lavigne-text">Skills</h2>
+          <h2 className="text-4xl font-bold mb-8 gradient-text text-center lavigne-text">Skills</h2>
           
           {/* Overall Description */}
           <div className="glass-card p-8 rounded-2xl mb-12 hover-lift">
@@ -175,34 +174,34 @@ export default function Home() {
             {/* Programming Languages */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Languages</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Python</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>JavaScript/TypeScript</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Java</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>C/C++</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Verilog</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>x86 and ARM Assembly</span>
                 </li>
               </ul>
@@ -211,26 +210,26 @@ export default function Home() {
             {/* Frontend */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Frontend</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>React/Next.js</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>HTML5/CSS3</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Tailwind CSS</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Responsive Design</span>
                 </li>
               </ul>
@@ -239,26 +238,26 @@ export default function Home() {
             {/* Backend */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Backend</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Node.js</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Express.js</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>SQL/NoSQL</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>RESTful APIs</span>
                 </li>
               </ul>
@@ -267,34 +266,34 @@ export default function Home() {
             {/* Libraries */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Libraries</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>pandas</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>NumPy</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Matplotlib</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Scikit-learn</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Keras</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>TensorFlow</span>
                 </li>
               </ul>
@@ -303,34 +302,34 @@ export default function Home() {
             {/* Coursework */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Coursework</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Honors Operating Systems</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Honors Computer Architecture</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Honors Data Structures</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Honors Discrete Mathematics</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Artificial Intelligence</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Software Engineering</span>
                 </li>
               </ul>
@@ -339,32 +338,32 @@ export default function Home() {
             {/* Tools & Others */}
             <div className="glass-card p-6 rounded-2xl hover-lift">
               <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
                 </svg>
                 <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Tools & Others</h3>
               </div>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Git/GitHub</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Docker</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>Jupyter Notebook</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>IntelliJ IDEA</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
                   <span>VS Code</span>
-                </li>
+          </li>
               </ul>
             </div>
 
@@ -373,10 +372,10 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section */}
-      <section id="work" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm relative">
+      <section id="work" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="cat-paw animate-paw" style={{ top: '20%', left: '15%' }}></div>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 gradient-text lavigne-text">Experience</h2>
+          <h2 className="text-4xl font-bold mb-8 gradient-text lavigne-text">Experience</h2>
           <div className="space-y-8">
             {/* Undergraduate Research Assistant */}
             <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
@@ -451,7 +450,7 @@ export default function Home() {
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="cat-paw animate-paw" style={{ bottom: '15%', right: '15%' }}></div>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 gradient-text lavigne-text">Projects</h2>
+          <h2 className="text-4xl font-bold mb-8 gradient-text lavigne-text">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* JPEB */}
@@ -465,7 +464,7 @@ export default function Home() {
                     href="https://github.com/PaulBailey-1/JPEB" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-coral-600 hover:text-coral-800 inline-flex items-center hover-lift group"
+                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
                   >
                     Learn more
                     <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -486,7 +485,7 @@ export default function Home() {
                     href="https://github.com/Tacocat0254/Stock_Market_Prediction" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-coral-600 hover:text-coral-800 inline-flex items-center hover-lift group"
+                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
                   >
                     Learn more
                     <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -506,9 +505,9 @@ export default function Home() {
                 <div className="mt-4">
                   <a 
                     href="https://www.youtube.com/watch?v=NoIVd9jywiw" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-coral-600 hover:text-coral-800 inline-flex items-center hover-lift group"
+            target="_blank"
+            rel="noopener noreferrer"
+                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
                   >
                     Learn more
                     <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -529,16 +528,16 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             {/* Decorative elements */}
-            <div className="absolute -top-6 -left-6 w-12 h-12 bg-pink-200 rounded-full opacity-50 animate-float"></div>
-            <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-orange-200 rounded-full opacity-50 animate-float-delayed"></div>
+            <div className="absolute -top-6 -left-6 w-12 h-12 bg-purple-900/50 rounded-full opacity-50 animate-float"></div>
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-blue-900/50 rounded-full opacity-50 animate-float-delayed"></div>
             
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100">
+            <div className="relative bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-900/30">
               <h2 className="lavigne-text text-4xl font-bold mb-8 text-center gradient-text">
                 Resume
               </h2>
               
               <div className="text-center space-y-6">
-                <p className="text-gray-600 text-lg">
+                <p className="text-white text-lg">
                   View my detailed resume to learn more about my experience and qualifications.
                 </p>
                 {/* <a
@@ -555,15 +554,15 @@ export default function Home() {
 
                 <a
                   href={`${process.env.NODE_ENV === 'production' ? '/my-website' : ''}/resume.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-pink-400 to-orange-400 text-white font-medium hover:from-coral-500 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
+          >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   View Resume
-                </a>
+          </a>
               </div>
             </div>
           </div>
@@ -571,14 +570,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm relative">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center space-x-8">
             {/* LinkedIn */}
             <a
               href="https://linkedin.com/in/emilyliangyr"
-              target="_blank"
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-gray-600 hover:text-coral-600 transition-colors hover-lift group"
               aria-label="LinkedIn Profile"
             >
@@ -590,8 +589,8 @@ export default function Home() {
             {/* GitHub */}
             <a
               href="https://github.com/Tacocat0254"
-              target="_blank"
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-gray-600 hover:text-coral-600 transition-colors hover-lift group"
               aria-label="GitHub Profile"
             >
@@ -603,8 +602,8 @@ export default function Home() {
             {/* Discord */}
             <a
               href="https://discord.com/users/tacocat0254"
-              target="_blank"
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-gray-600 hover:text-coral-600 transition-colors hover-lift group"
               aria-label="Discord Profile"
             >

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-coral-100 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-coral-100 dark:border-blue-900 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -37,7 +38,7 @@ const Navbar = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-coral-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                 >
                   {item.name}
                 </a>
@@ -45,19 +46,21 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-coral-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                 >
                   {item.name}
                 </a>
               )
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
+            <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-coral-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-coral-500"
+              className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 focus:outline-none"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -77,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-coral-100 shadow-lg">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 border-b border-coral-100 dark:border-blue-900 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               item.external ? (
@@ -86,7 +89,7 @@ const Navbar = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-coral-600 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -95,7 +98,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-coral-600 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -11,6 +11,144 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Light mode colors */
+    --color-coral-50: #fff5f5;
+    --color-coral-100: #ffe3e3;
+    --color-coral-200: #ffc9c9;
+    --color-coral-300: #ffa8a8;
+    --color-coral-400: #ff8787;
+    --color-coral-500: #ff6b6b;
+    --color-coral-600: #fa5252;
+    --color-coral-700: #f03e3e;
+    --color-coral-800: #e03131;
+    --color-coral-900: #c92a2a;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --color-coral-50: #f3f0ff;
+    --color-coral-100: #e5dbff;
+    --color-coral-200: #d0bfff;
+    --color-coral-300: #b197fc;
+    --color-coral-400: #9775fa;
+    --color-coral-500: #845ef7;
+    --color-coral-600: #7048e8;
+    --color-coral-700: #5f3dc4;
+    --color-coral-800: #4c3299;
+    --color-coral-900: #3b2b6e;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-coral-500 to-orange-500 dark:from-purple-500 dark:to-blue-500;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-coral-400 to-orange-400 dark:from-purple-500 dark:to-blue-500;
+  }
+
+  .glass-card {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-coral-100 dark:border-blue-900/50;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+/* Dark mode styles */
+.dark {
+  @apply bg-gray-950 text-gray-100;
+}
+
+/* Dark mode background for all sections */
+.dark #about,
+.dark #projects,
+.dark #skills,
+.dark #work,
+.dark #resume {
+  @apply bg-gray-950;
+}
+
+.dark .bg-gradient-to-br {
+  @apply from-gray-950 via-gray-900 to-gray-950;
+}
+
+.dark .glass-card {
+  @apply bg-gray-900/90 dark:border-blue-900/30;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.1);
+}
+
+/* Update root dark mode background */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f3f3f3;
+  }
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 12px 40px 0 rgba(59, 130, 246, 0.15);
+}
+
+/* Update existing dark mode styles */
+.dark .cat-paw {
+  @apply opacity-20;
+  filter: brightness(0.8);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a855f7'%3E%3Cpath d='M12 2C10.5 2 9 3 9 4.5C9 6 10.5 7 12 7C13.5 7 15 6 15 4.5C15 3 13.5 2 12 2ZM7 8C5.5 8 4 9 4 10.5C4 12 5.5 13 7 13C8.5 13 10 12 10 10.5C10 9 8.5 8 7 8ZM17 8C15.5 8 14 9 14 10.5C14 12 15.5 13 17 13C18.5 13 20 12 20 10.5C20 9 18.5 8 17 8ZM12 14C10.5 14 9 15 9 16.5C9 18 10.5 19 12 19C13.5 19 15 18 15 16.5C15 15 13.5 14 12 14Z'/%3E%3C/svg%3E");
+}
+
+.dark .cat-paw::before {
+  background-color: theme('colors.purple.500');
+}
+
+.dark .cat-whisker {
+  @apply bg-blue-400 opacity-40;
+}
+
+.dark .cat-whisker::before,
+.dark .cat-whisker::after {
+  @apply bg-blue-400 opacity-40;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, theme('colors.purple.500') 0%, theme('colors.blue.500') 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.dark .gradient-bg {
+  background: linear-gradient(135deg, theme('colors.purple.500') 0%, theme('colors.blue.500') 100%);
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar-track {
+  @apply bg-gray-950;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-blue-600;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-600;
+}
+
+/* Custom selection color for dark mode */
+.dark ::selection {
+  @apply bg-blue-600 text-white;
+}
+
+/* Existing styles */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,13 +157,6 @@
   --cat-pink: #FFB6C1;
   --cat-orange: #FFA07A;
   --cat-gray: #A9A9A9;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a1a;
-    --foreground: #f3f3f3;
-  }
 }
 
 body {
@@ -178,4 +309,79 @@ section {
 
 .lavigne-text {
   font-family: 'Lavigne Display Bold', serif;
+}
+
+/* Skills section dark mode styles */
+.dark #skills h2,
+.dark #skills h3,
+.dark #skills .text-gray-600 {
+  @apply text-purple-400;
+}
+
+.dark #skills .text-gray-900 {
+  @apply text-purple-300;
+}
+
+.dark #skills .bg-gray-100 {
+  @apply bg-gray-800;
+}
+
+.dark #skills .border-gray-200 {
+  @apply border-purple-900/30;
+}
+
+.dark #skills .hover\:bg-gray-50:hover {
+  @apply hover:bg-gray-700;
+}
+
+/* Dark mode text colors for all sections */
+.dark #about .text-gray-600,
+.dark #projects .text-gray-600,
+.dark #skills .text-gray-600,
+.dark #work .text-gray-600,
+.dark #resume .text-gray-600 {
+  @apply text-white;
+}
+
+.dark #about .text-gray-900,
+.dark #projects .text-gray-900,
+.dark #skills .text-gray-900,
+.dark #work .text-gray-900,
+.dark #resume .text-gray-900 {
+  @apply text-white;
+}
+
+/* Update section headers to purple */
+.dark #about h2,
+.dark #projects h2,
+.dark #skills h2,
+.dark #work h2,
+.dark #resume h2 {
+  @apply text-purple-400;
+}
+
+.dark #about h3,
+.dark #projects h3,
+.dark #skills h3,
+.dark #work h3,
+.dark #resume h3 {
+  @apply text-purple-400;
+}
+
+/* Keep gradient text for main section titles */
+.dark .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500;
+}
+
+/* Update prose text in dark mode */
+.dark .prose {
+  @apply text-white;
+}
+
+.dark .prose p {
+  @apply text-white;
+}
+
+.dark .prose li {
+  @apply text-white;
 }
