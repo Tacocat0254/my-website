@@ -11,7 +11,7 @@ A modern, responsive personal portfolio website built with Next.js and Tailwind 
   - GitHub Pages deployment
 
 - **Design Elements**
-  - Responsive design for all devices
+  - Responsive design for all devices (desktop + mobile)
   - Gradient backgrounds
   - Decorative elements (randomly generated flowers)
   - Smooth animations and transitions
