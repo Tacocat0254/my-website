@@ -15,6 +15,7 @@ A modern, responsive personal portfolio website built with Next.js and Tailwind 
   - Gradient backgrounds
   - Decorative elements (randomly generated flowers)
   - Smooth animations and transitions
+  - Dark mode for accessibility 
 
 - **Sections**
   - Contact information
