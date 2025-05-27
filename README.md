@@ -28,6 +28,6 @@ A modern, responsive personal portfolio website built with Next.js and Tailwind 
 
 ## Website
 
-The website is live at https://tacocat0254.github.io/my-website/
+The website is live at https://www.emilyliangyr.com/
 
 
