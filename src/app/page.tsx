@@ -132,7 +132,7 @@ export default function Home() {
                   </div>
                   <div className="glass-card p-4 rounded-xl hover-lift">
                     <h4 className="font-medium text-gray-900 mb-1">Interests</h4>
-                    <p className="text-gray-600">Rock Climbing, Hiking, and Robotics</p>
+                    <p className="text-gray-600">Rock Climbing, Hiking, and Photography</p>
                   </div>
                 </div>
               </div>
