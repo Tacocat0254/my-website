@@ -7,12 +7,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '/my-website/' },
-    { name: 'About', href: '/my-website/#about' },
-    { name: 'Skills', href: '/my-website/#skills' },
-    { name: 'Experience', href: '/my-website/#work' },
-    { name: 'Projects', href: '/my-website/#projects' },
-    { name: 'Resume', href: '/my-website/resume.pdf', external: true },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#work' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Resume', href: '/resume.pdf', external: true },
   ];
 
   return (
@@ -22,12 +22,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a 
-              href="/my-website/"
-              className="gradient-text lavigne-text text-2xl font-bold"
+                href="/"
+                className="gradient-text lavigne-text text-2xl font-bold"
             >
-              Emily Liang
+                Emily Liang
             </a>
-          </div>
+            </div>
+
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">

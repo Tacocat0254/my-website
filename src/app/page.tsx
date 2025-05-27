@@ -89,7 +89,7 @@ export default function Home() {
               <div className="relative">
                 <div className="aspect-square relative rounded-2xl overflow-hidden">
         <Image
-                    src={`${process.env.NODE_ENV === 'production' ? '/my-website' : ''}/profile.jpg`}
+                    src="/profile.jpg"
                     alt="Profile picture"
                     fill
                     className="object-cover"
@@ -542,7 +542,7 @@ export default function Home() {
                   View my detailed resume to learn more about my experience and qualifications.
                 </p>
                 <a
-                  href={`${process.env.NODE_ENV === 'production' ? '/my-website' : ''}/resume.pdf`}
+                  href={`${process.env.NODE_ENV === 'production' ? '' : ''}/resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 rounded-full 
