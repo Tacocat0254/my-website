@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';          // <-- Import Link
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -21,18 +22,17 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a 
-                href="/"
-                className="gradient-text lavigne-text text-2xl font-bold"
+            <Link 
+              href="/" 
+              className="gradient-text lavigne-text text-2xl font-bold"
             >
-                Emily Liang
-            </a>
-            </div>
-
+              Emily Liang
+            </Link>
+          </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item) =>
               item.external ? (
                 <a
                   key={item.name}
@@ -44,15 +44,15 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ) : (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                 >
                   {item.name}
-                </a>
+                </Link>
               )
-            ))}
+            )}
             <ThemeToggle />
           </div>
 
@@ -83,7 +83,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 border-b border-coral-100 dark:border-blue-900 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
+            {navItems.map((item) =>
               item.external ? (
                 <a
                   key={item.name}
@@ -96,16 +96,16 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ) : (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-coral-500 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               )
-            ))}
+            )}
           </div>
         </div>
       )}
@@ -113,4 +113,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
