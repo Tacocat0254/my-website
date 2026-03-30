@@ -1,14 +1,12 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Enable static exports
-  basePath: process.env.NODE_ENV === 'production' ? '/my-website' : '', // Replace with your repo name
+  output: 'export',  // Keep this for static export
   images: {
     unoptimized: true, // Required for static export
-    remotePatterns: [], // Add any remote image patterns if needed
+    remotePatterns: [], // Leave as-is or configure if needed
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/my-website/' : '', // Add trailing slash
-  trailingSlash: true, // Recommended for GitHub Pages
+  trailingSlash: true, // Optional, you can keep or remove this
 };
 
 export default nextConfig;

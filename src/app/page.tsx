@@ -376,17 +376,6 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 gradient-text lavigne-text">Experience</h2>
           <div className="space-y-8">
-            {/* Undergraduate Research Assistant */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">Undergraduate Research Assistant</h3>
-              <p className="text-gray-600">The University of Texas at Austin • Jan 2025-present</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Assist with ROS (Robot Operating System) implementation and testing.</li>
-                <li>Conduct experiments with AugRE (Augmented Robot Environment to Facilitate Human-Robot Teaming).</li>
-                <li>Standardized data collection procedures, ensuring consistent data formatting, and accelerated experimental analysis by
-                15% through enhanced data usability.</li>
-              </ul>
-            </div>
 
             {/* Longhorn Racing Internal Combustion */}
             <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
