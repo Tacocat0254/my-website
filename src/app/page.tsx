@@ -249,11 +249,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 rounded-full
-            bg-gradient-to-r from-pink-400 to-orange-400
-            dark:from-purple-600 dark:to-purple-900
+            bg-pink-700 dark:bg-gradient-to-r dark:from-purple-600 dark:to-purple-900
             text-white font-medium
-            hover:from-coral-500 hover:to-orange-500
+            hover:bg-pink-800
             dark:hover:from-purple-900 dark:hover:to-blue-900
+            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-700 dark:focus-visible:outline-purple-400
             transition-all duration-300
             shadow-lg dark:shadow-md
             hover:shadow-xl dark:hover:shadow-lg
