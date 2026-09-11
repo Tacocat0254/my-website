@@ -6,8 +6,8 @@ import { ThemeProvider } from 'next-themes';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emily Liang - Personal Website",
-  description: "Personal website showcasing my skills, work experience, and projects.",
+  title: "Emily Liang | Turing Scholar & Software Engineer",
+  description: "Emily Liang is a UT Austin Turing Scholar studying Computer Science and Mathematics, with experience in quantitative development, racing simulation, and systems engineering.",
 };
 
 export default function RootLayout({

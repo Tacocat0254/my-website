@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Navbar from '@/components/Navbar';
 import ScrollPaws from '@/components/ScrollPaws';
+import { experience, projects, skillGroups } from '@/data/profile';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-orange-50">
       <Navbar />
       <ScrollPaws />
-      
+
       {/* Hero Section - Full Viewport Height */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Cat-themed background decorations */}
@@ -17,7 +18,7 @@ export default function Home() {
           <div className="cat-paw animate-paw" style={{ top: '20%', right: '15%', animationDelay: '1s' }}></div>
           <div className="cat-paw animate-paw" style={{ bottom: '15%', left: '20%', animationDelay: '2s' }}></div>
           <div className="cat-paw animate-paw" style={{ bottom: '25%', right: '25%', animationDelay: '3s' }}></div>
-          
+
           {/* Gradient orbs */}
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
@@ -30,12 +31,12 @@ export default function Home() {
               Emily Liang
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-white mb-8 font-medium leading-relaxed">
-            Computer Science, Mathematics, and Business <br />
-            Student at UT Austin
+            Computer Science &amp; Mathematics <br />
+            Turing Scholar at UT Austin
             </p>
             <div className="space-y-4 text-lg sm:text-xl">
               <p className="text-gray-600 dark:text-white">
-                <a href="mailto:emilyliangyr@gmail.com" 
+                <a href="mailto:emilyliangyr@gmail.com"
                    className="hover:text-pink-600 dark:hover:text-purple-400 transition-colors inline-flex items-center hover-lift group">
                   <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -44,7 +45,7 @@ export default function Home() {
                 </a>
               </p>
               <p className="text-gray-600 dark:text-white">
-                <a href="tel:+6822054481" 
+                <a href="tel:+16822054481"
                    className="hover:text-pink-600 dark:hover:text-purple-400 transition-colors inline-flex items-center hover-lift group">
                   <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -54,8 +55,8 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 className="gradient-bg inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white hover:shadow-lg transition-all hover-lift group"
               >
                 Learn More About Me!
@@ -63,8 +64,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </a>
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 className="glass-card inline-flex items-center px-8 py-4 border border-pink-200 text-base font-medium rounded-full text-gray-700 dark:text-white hover:bg-pink-50 transition-all hover-lift group"
               >
                 View My Projects
@@ -90,7 +91,7 @@ export default function Home() {
                 <div className="aspect-square relative rounded-2xl overflow-hidden">
         <Image
                     src="/profile.jpg"
-                    alt="Profile picture"
+                    alt="Emily Liang"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -113,7 +114,7 @@ export default function Home() {
                 </div>
                 <div className="prose prose-lg text-gray-600">
                   <p>
-                    I am pursuing a BS in Computer Science and Mathematics as well as a Minor in Business as a Turing Scholar at the University of Texas at Austin.
+                    I am a Turing Scholar at the University of Texas at Austin, pursuing a B.S. in Computer Science, a B.S. in Mathematics, and a minor in Business. I expect to graduate in May 2028.
                   </p>
                 </div>
                 {/* Quick Facts */}
@@ -127,8 +128,8 @@ export default function Home() {
                     <p className="text-gray-600">UT Austin</p>
                   </div>
                   <div className="glass-card p-4 rounded-xl hover-lift">
-                    <h4 className="font-medium text-gray-900 mb-1">Experience</h4>
-                    <p className="text-gray-600">3 years</p>
+                    <h4 className="font-medium text-gray-900 mb-1">Graduation</h4>
+                    <p className="text-gray-600">May 2028 (expected)</p>
                   </div>
                   <div className="glass-card p-4 rounded-xl hover-lift">
                     <h4 className="font-medium text-gray-900 mb-1">Interests</h4>
@@ -143,8 +144,7 @@ export default function Home() {
           <div className="glass-card rounded-2xl p-8 hover-lift">
             <div className="prose prose-lg text-gray-600">
               <p>
-                As a Turing Scholar at UT Austin, I am passionate about bridging the gap between theoretical computer science and practical applications. My journey in technology began with a curiosity about how computers work 
-                at their core. My interests span from low-level systems programming to AI/ML. </p>
+                My work spans optimization, simulation, and systems programming. At Base Power, I developed battery dispatch strategies for the ERCOT electricity market. I also lead Longhorn Racing’s simulation and validation team and mentor UT Austin students as an undergraduate course assistant. </p>
               <p className="mt-4">
                 Beyond coding, I am an avid rock climber and hiker, finding that the problem-solving skills I develop on the wall often translate to my technical work. I believe in creating technology that is not just innovative, but also accessible and impactful.
               </p>
@@ -158,214 +158,25 @@ export default function Home() {
         <div className="cat-paw animate-paw" style={{ bottom: '10%', left: '10%' }}></div>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 gradient-text text-center lavigne-text">Skills</h2>
-          
+
           {/* Overall Description */}
           <div className="glass-card p-8 rounded-2xl mb-12 hover-lift">
             <div className="prose prose-lg text-gray-600 mx-auto">
               <p className="text-center">
-                My technical expertise spans from front-end frameworks to systems programming, with a strong foundation in computer science principles.
+                I use mathematical modeling, data analysis, and systems programming to build and evaluate software, from battery dispatch strategies to operating systems.
               </p>
             </div>
           </div>
 
-          {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Programming Languages */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Languages</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skillGroups.map((group) => (
+              <div key={group.title} className="glass-card p-6 rounded-2xl hover-lift">
+                <h3 className="font-semibold text-gray-900 text-lg lavigne-text mb-4">{group.title}</h3>
+                <ul className="space-y-2 text-gray-600">
+                  {group.items.map((item) => <li key={item} className="flex items-start gap-2"><span aria-hidden="true" className="w-2 h-2 mt-2 shrink-0 bg-pink-500 dark:bg-purple-500 rounded-full" />{item}</li>)}
+                </ul>
               </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Python</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>JavaScript/TypeScript</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Java</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>C/C++</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Verilog</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>x86 and ARM Assembly</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Frontend */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Frontend</h3>
-              </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>React/Next.js</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>HTML5/CSS3</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Tailwind CSS</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Responsive Design</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Backend */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Backend</h3>
-              </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Node.js</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Express.js</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>SQL/NoSQL</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>RESTful APIs</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Libraries */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Libraries</h3>
-              </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>pandas</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>NumPy</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Matplotlib</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Scikit-learn</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Keras</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>TensorFlow</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Coursework */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Coursework</h3>
-              </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Honors Operating Systems</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Honors Computer Architecture</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Honors Data Structures</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Honors Discrete Mathematics</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Artificial Intelligence</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Software Engineering</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Tools & Others */}
-            <div className="glass-card p-6 rounded-2xl hover-lift">
-              <div className="flex items-center space-x-3 mb-4">
-                <svg className="w-8 h-8 text-pink-500 dark:text-purple-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-                </svg>
-                <h3 className="font-semibold text-gray-900 text-lg lavigne-text">Tools & Others</h3>
-              </div>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Git/GitHub</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Docker</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>Jupyter Notebook</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>IntelliJ IDEA</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-pink-500 dark:bg-purple-500 rounded-full"></span>
-                  <span>VS Code</span>
-          </li>
-              </ul>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
@@ -377,58 +188,16 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8 gradient-text lavigne-text">Experience</h2>
           <div className="space-y-8">
 
-            {/* Longhorn Racing Internal Combustion */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">Simulation and Validation Engineer</h3>
-              <p className="text-gray-600">Longhorn Racing Internal Combustion • September 2024-present</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Collaborated on LapSim (vehicular simulation) to drive 10+ engineering design choices.</li>
-                <li>Built an automated graph generation tool, decreasing the time spent on creating visualizations by 60% and enabling faster identification of key trends from collected datasets.</li>
-              </ul>
-            </div>
-            
-            {/* First-Year Trading and Technology Program (FTTP) */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">First-Year Trading and Technology Program (FTTP)</h3>
-              <p className="text-gray-600">Jane Street • March 2025</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Jane Street&apos;s First Year Trading and Technology 3-day program in NYC.</li>
-                <li>Chosen as one of 100 students across the US and Canada to attend.</li>
-                <li> Used a game theoretic and mathematical approach while competing in an Estimathon to determine an appropriate range of values for trivia questions.</li>
-              </ul>
-            </div>
-
-            {/* Software Engineering Intern */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">Software Engineering Intern</h3>
-              <p className="text-gray-600">Lockheed Martin Aeronautics • September 2023 – May 2024</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Developed a version compatibility lookup tool, reducing software mismatch by 70% and streamlining coordination.</li>
-                <li>Collaborated the Air Force Research Laboratory, L3 Harris, and Raytheon on research effort.</li>
-              </ul>
-            </div>
-
-            {/* Technology Project Manager */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">Technology Project Manager</h3>
-              <p className="text-gray-600">Keller Independent School District • September 2023 – September 2024</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Led a team of 10 to support district-wide technology deployment for 35,000 students and 4,000 faculty members.</li>
-                <li>Delivered training to 100+ educators on EdTech platforms, reducing software onboarding issues by 50% and ensuring
-                seamless technology adoption across 40+ campuses.</li>
-              </ul>
-            </div>
-
-            {/* Summer Swim Instructor */}
-            <div className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
-              <h3 className="text-xl font-semibold text-gray-900">Summer Swim Instructor</h3>
-              <p className="text-gray-600">Lakeside Aquatics Club • May 2023 – September 2024</p>
-              <ul className="mt-2 text-gray-600 list-disc list-inside space-y-1">
-                <li>Demonstrated expertise in various swim strokes, techniques, and water safety protocols.</li>
-                <li>Conducted assessments to evaluate participants&apos; swimming abilities and designed customized lesson plans to meet their specific needs and goals.</li>
-                <li>Created a safe and supportive learning environment, ensuring the well-being and comfort of participants, ages 3-15  at all times.</li>
-              </ul>
-            </div>
+            {experience.map((role) => (
+              <article key={role.company} className="glass-card p-6 rounded-2xl hover-lift border-l-4 border-pink-500">
+                <h3 className="text-xl font-semibold text-gray-900">{role.title}</h3>
+                <p className="text-gray-600 mt-1">{role.company} • {role.dates}</p>
+                <p className="text-sm text-gray-600 mt-1">{role.location}</p>
+                <ul className="mt-3 text-gray-600 list-disc pl-5 space-y-2">
+                  {role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                </ul>
+              </article>
+            ))}
 
           </div>
         </div>
@@ -441,71 +210,16 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-8 gradient-text lavigne-text">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            {/* JPEB */}
-            <div className="glass-card rounded-2xl overflow-hidden hover-lift">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900">JPEB: 16-bit Computer</h3>
-                <p className="mt-2 text-gray-600">Custom 16-bit computer from scratch, including a custom ISA
-                inspired by Dr. Bruce Jacob&apos;s RiSC-16, compiler, assembler, processor, and emulator.</p>
-                <div className="mt-4">
-                  <a 
-                    href="https://github.com/PaulBailey-1/JPEB" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
-                  >
-                    Learn more
-                    <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Stock Market Prediction */}
-            <div className="glass-card rounded-2xl overflow-hidden hover-lift">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900">Stock Market Prediction</h3>
-                <p className="mt-2 text-gray-600">This project explores the use of deep learning—specifically Long Short-Term Memory (LSTM) networks—to analyze and forecast stock market trends.</p>
-                <div className="mt-4">
-                  <a 
-                    href="https://github.com/Tacocat0254/Stock_Market_Prediction" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
-                  >
-                    Learn more
-                    <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            {/* Vision Guardian */}
-            <div className="glass-card rounded-2xl overflow-hidden hover-lift">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900">Vision Guardian</h3>
-                <p className="mt-2 text-gray-600">Built a video-based glaucoma and cataract detection system using OpenCV, MediaPipe, and TensorFlow for 
-                accessible healthcare technology.</p>
-                <div className="mt-4">
-                  <a 
-                    href="https://www.youtube.com/watch?v=NoIVd9jywiw" 
-            target="_blank"
-            rel="noopener noreferrer"
-                    className="text-coral-600 dark:text-purple-600 hover:text-coral-800 inline-flex items-center hover-lift group"
-                  >
-                    Learn more
-                    <svg className="w-5 h-5 ml-1 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
+            {projects.map((project) => (
+              <article key={project.title} className="glass-card rounded-2xl p-6 hover-lift">
+                <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
+                <p className="text-sm font-medium text-pink-700 dark:text-purple-300 mt-2">{project.technologies}</p>
+                <ul className="mt-4 text-gray-600 list-disc pl-5 space-y-2">
+                  {project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                </ul>
+                {project.href && <a href={project.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-coral-700 dark:text-purple-300 hover:underline">View project →</a>}
+              </article>
+            ))}
 
           </div>
         </div>
@@ -520,29 +234,29 @@ export default function Home() {
             <div className="absolute -top-6 -left-6 w-12 h-12 bg-pink-400/50 dark:bg-purple-900/50 rounded-full opacity-50 animate-float"></div>
             <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-pink-400/50 dark:bg-blue-900/50 rounded-full opacity-50 animate-float-delayed"></div>
 
-            
+
             <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100 dark:border-purple-900/30">
               <h2 className="lavigne-text text-4xl font-bold mb-8 text-center gradient-text">
                 Resume
               </h2>
-              
+
               <div className="text-center space-y-6">
                 <p className="text-gray-600 dark:text-white text-lg">
-                  View my detailed resume to learn more about my experience and qualifications.
+                  Explore my experience in quantitative development, simulation, and systems engineering, along with my education and technical skills.
                 </p>
                 <a
-                  href={`${process.env.NODE_ENV === 'production' ? '' : ''}/resume.pdf`}
+                  href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 rounded-full 
-            bg-gradient-to-r from-pink-400 to-orange-400 
-            dark:from-purple-600 dark:to-purple-900 
-            text-white font-medium 
-            hover:from-coral-500 hover:to-orange-500 
+            className="inline-flex items-center px-6 py-3 rounded-full
+            bg-gradient-to-r from-pink-400 to-orange-400
+            dark:from-purple-600 dark:to-purple-900
+            text-white font-medium
+            hover:from-coral-500 hover:to-orange-500
             dark:hover:from-purple-900 dark:hover:to-blue-900
-            transition-all duration-300 
-            shadow-lg dark:shadow-md 
-            hover:shadow-xl dark:hover:shadow-lg 
+            transition-all duration-300
+            shadow-lg dark:shadow-md
+            hover:shadow-xl dark:hover:shadow-lg
             transform hover:-translate-y-0.5"
                     >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
