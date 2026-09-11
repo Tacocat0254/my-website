@@ -207,6 +207,8 @@ body {
 }
 
 .gradient-text {
+  /* Extend the painted area below the baseline for descenders such as “g”. */
+  padding-bottom: 0.15em;
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   background-clip: text;
