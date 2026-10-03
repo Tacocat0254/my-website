@@ -159,15 +159,6 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8 gradient-text text-center lavigne-text">Skills</h2>
 
-          {/* Overall Description */}
-          <div className="glass-card p-8 rounded-2xl mb-12 hover-lift">
-            <div className="prose prose-lg text-gray-600 mx-auto">
-              <p className="text-center">
-                I use mathematical modeling, data analysis, and systems programming to build and evaluate software, from battery dispatch strategies to operating systems.
-              </p>
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillGroups.map((group) => (
               <div key={group.title} className="glass-card p-6 rounded-2xl hover-lift">
