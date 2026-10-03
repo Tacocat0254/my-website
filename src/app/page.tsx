@@ -86,24 +86,24 @@ export default function Home() {
           {/* Profile Section */}
           <div className="glass-card rounded-2xl p-8 mb-12 hover-lift">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              {/* Profile Image Container */}
-              <div className="relative">
-                <div className="aspect-square relative rounded-2xl overflow-hidden">
-        <Image
-                    src="/profile.jpg"
-                    alt="Emily Liang"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-          priority
-        />
-                  {/* Decorative paw prints */}
-                  <div className="absolute -top-4 -right-4 w-12 h-12 cat-paw animate-paw opacity-70"></div>
-                  <div className="absolute -bottom-4 -left-4 w-12 h-12 cat-paw animate-paw opacity-70" style={{ animationDelay: '1s' }}></div>
+              {/* Flower frame around the supplied portrait */}
+              <div className="portrait-flower">
+                <svg className="portrait-petals" viewBox="0 0 400 400" aria-hidden="true">
+                  {Array.from({ length: 10 }, (_, index) => (
+                    <ellipse key={index} cx="200" cy="94" rx="58" ry="88" transform={`rotate(${index * 36} 200 200)`} />
+                  ))}
+                </svg>
+                <div className="portrait-center">
+                  <Image
+                    src="/profile.png"
+                    alt="Emily Liang smiling outdoors"
+                    width={676}
+                    height={584}
+                    className="portrait-photo"
+                    sizes="(max-width: 768px) 80vw, 360px"
+                    priority
+                  />
                 </div>
-                {/* Decorative frame */}
-                <div className="absolute inset-0 rounded-2xl border-4 border-pink-200/50 transform rotate-3 scale-105 -z-10"></div>
-                <div className="absolute inset-0 rounded-2xl border-4 border-orange-200/50 transform -rotate-3 scale-105 -z-10"></div>
               </div>
 
               {/* Profile Info */}

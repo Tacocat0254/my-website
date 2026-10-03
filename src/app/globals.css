@@ -387,3 +387,51 @@ section {
 .dark .prose li {
   @apply text-white;
 }
+
+.portrait-flower {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  filter: drop-shadow(0 8px 12px rgb(190 24 93 / 12%));
+}
+
+.portrait-petals {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fda4af;
+  stroke: #fb7185;
+  stroke-width: 1.5;
+}
+
+.portrait-center {
+  position: absolute;
+  inset: 15%;
+  overflow: hidden;
+  border-radius: 50%;
+  outline: 5px solid #fff1f2;
+  background: #fff1f2;
+}
+
+.portrait-photo {
+  /* Crop the screenshot's white margin to its existing circular portrait. */
+  position: absolute;
+  width: 127.07%;
+  max-width: none;
+  height: auto;
+  left: -12.22%;
+  top: -6.02%;
+}
+
+.dark .portrait-petals {
+  fill: #a78bfa;
+  stroke: #8b5cf6;
+}
+
+.dark .portrait-center {
+  outline-color: #ede9fe;
+  background: #ede9fe;
+}
